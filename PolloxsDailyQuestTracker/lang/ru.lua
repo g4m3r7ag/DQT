@@ -8,7 +8,8 @@ L.SI_DQT_CHARACTERS_HEADER			= "Персонажи"
 L.SI_DQT_SECTION_HEADER				= "Разделы"
 
 -- Section Names
-L.SI_DQT_CRAFTING					= "Ремесла"
+--L.SI_DQT_CRAFTING					= "Ремесла"
+L.SI_DQT_CRAFTING					= GetString(SI_QUESTTYPE4)
 L.SI_DQT_SUMMERSET					= "Саммерсет"
 L.SI_DQT_VVARDENFELL				= "Вварденфел"
 L.SI_DQT_GUILD						= "Гильдия"
@@ -54,6 +55,15 @@ L.SI_DQT_HARROWSTORM				= "Harrowstorms" -- Added by DarkPhalanx
 L.SI_DQT_PVP						= "PVP" -- Added by DarkPhalanx
 L.SI_DQT_RESISTANCE					= "Wayward Guardian" -- Added by DarkPhalanx
 
+L.SI_DQT_CLOTHING					= GetString(SI_ITEMFILTERTYPE14)
+L.SI_DQT_BLACKSMITHING				= GetString(SI_ITEMFILTERTYPE13)
+L.SI_DQT_WOODWORKING				= GetString(SI_ITEMFILTERTYPE15)
+L.SI_DQT_JEWELRY					= GetString(SI_ITEMFILTERTYPE25)
+L.SI_DQT_ALCHEMY					= GetString(SI_ITEMFILTERTYPE16)
+L.SI_DQT_ENCHANTING					= GetString(SI_ITEMFILTERTYPE17)
+L.SI_DQT_PROVISIONING				= GetString(SI_ITEMFILTERTYPE18)
+
+--[[
 L.SI_DQT_CLOTHING					= "Портняжное дело"
 L.SI_DQT_BLACKSMITHING				= "Кузнечное дело"
 L.SI_DQT_WOODWORKING				= "Столярное дело"
@@ -61,6 +71,7 @@ L.SI_DQT_JEWELRY					= "Ювелирное дело"
 L.SI_DQT_ALCHEMY					= "Алхимия"
 L.SI_DQT_ENCHANTING					= "Зачарование"
 L.SI_DQT_PROVISIONING				= "Снабжение"
+--]]
 
 --[[ Set these to the strings at the start of each quest, including
 the leading space. The code will generate the display name by stripping

@@ -108,15 +108,15 @@ L.SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_14 = "The Spirit Trap in Mala
 L.SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_15 = "Скрытая тьма на Ауридоне"
 
 -- Crafting Writs. Consumables Crafting Writs
-L.SI_DQT_CRAFTING_WRITS_CONSUMABLES_CRAFTING_WRITS_01 = MN.GetRawQuestName(lang, 6105) -- "Alchemist Writ"
-L.SI_DQT_CRAFTING_WRITS_CONSUMABLES_CRAFTING_WRITS_02 = MN.GetRawQuestName(lang, 5407) -- "Enchanter Writ"
-L.SI_DQT_CRAFTING_WRITS_CONSUMABLES_CRAFTING_WRITS_03 = MN.GetRawQuestName(lang, 5414) -- "Provisioner Writ"
+L.SI_DQT_CRAFTING_WRITS_CONSUMABLES_CRAFTING_WRITS_01 = GetQuestName(6105) -- "Alchemist Writ"
+L.SI_DQT_CRAFTING_WRITS_CONSUMABLES_CRAFTING_WRITS_02 = GetQuestName(5407) -- "Enchanter Writ"
+L.SI_DQT_CRAFTING_WRITS_CONSUMABLES_CRAFTING_WRITS_03 = GetQuestName(5414) -- "Provisioner Writ"
 
 -- Crafting Writs. Equipment Crafting Writs
-L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_01 = MN.GetRawQuestName(lang, 5377) -- "Blacksmith Writ"
-L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_02 = MN.GetRawQuestName(lang, 5374) -- "Clothier Writ"
-L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_03 = MN.GetRawQuestName(lang, 6228) -- "Jewelry Crafting Writ"
-L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_04 = MN.GetRawQuestName(lang, 5395) -- "Woodworker Writ"
+L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_01 = GetQuestName(5377) -- "Blacksmith Writ"
+L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_02 = GetQuestName(5374) -- "Clothier Writ"
+L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_03 = GetQuestName(6228) -- "Jewelry Crafting Writ"
+L.SI_DQT_CRAFTING_WRITS_EQUIPMENT_CRAFTING_WRITS_04 = GetQuestName(5395) -- "Woodworker Writ"
 
 -- Crafting Writs. Master Writs
 L.SI_DQT_CRAFTING_WRITS_MASTER_WRITS_01 = MN.GetRawQuestName(lang, 5991) -- "A Masterful Concoction"

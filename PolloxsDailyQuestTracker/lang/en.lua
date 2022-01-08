@@ -54,7 +54,6 @@ L.SI_DQT_NEW_MOON					= "New Moon" -- Added by DarkPhalanx
 L.SI_DQT_DRAGONHUNT					= "Dragon Hunts" -- Added by DarkPhalanx
 L.SI_DQT_HARROWSTORM				= "Harrowstorms" -- Added by DarkPhalanx
 L.SI_DQT_PVP						= "PVP" -- Added by DarkPhalanx
---L.SI_DQT_RESISTANCE					= "Resistance" -- Added by DarkPhalanx
 L.SI_DQT_RESISTANCE					= "Wayward Guardian" -- Updated by g4m3r7ag to match https://en.uesp.net/wiki/Online:Repeatable_Quests
 
 L.SI_DQT_CLOTHING					= GetString(SI_ITEMFILTERTYPE14)
