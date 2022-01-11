@@ -6,7 +6,8 @@ DQT.Timer = Timer
 local TIMER_TYPE = {
 	DUNGEON = 0,
 	BATTLEGROUNDS = 1,
-	MOUNT = 2
+	MOUNT = 2,
+	BEQUEATHER = 3
 }
 
 Timer.TIMER_TYPE = TIMER_TYPE
@@ -17,6 +18,7 @@ function Timer:init()
 	self:resetDungeonTimer()
 	self:resetBattlegroundsTimer()
 	self:resetMountTraining()
+	self:resetBequeatherTimer()
 	
 	EVENT_MANAGER:RegisterForEvent(DQT.Main.name, EVENT_ACTIVITY_FINDER_ACTIVITY_COMPLETE, Timer.onActivityFinderActivityComplete)
 	EVENT_MANAGER:RegisterForEvent(DQT.Main.name, EVENT_BATTLEGROUND_STATE_CHANGED, Timer.onBattlegroundStateChanged)
@@ -51,6 +53,10 @@ function Timer.onRidingSkillImprovement(eventCode, ridingSkillType, previous, cu
 	if source == RIDING_TRAIN_SOURCE_STABLES then
 		Timer:resetMountTraining()
 	end
+end
+
+function Timer:resetBequeatherTimer()
+	self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
 end
 
 --[[

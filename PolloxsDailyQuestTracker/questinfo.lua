@@ -910,7 +910,8 @@ Info.OtherTimerQuests =
     {
         TimerQuest:new(GetString(SI_DQT_RANDOM_DUNGEON), TIMER_TYPE.DUNGEON),
         TimerQuest:new(GetString(SI_DQT_RANDOM_BATTLEGROUNDS), TIMER_TYPE.BATTLEGROUNDS),
-        TimerQuest:new(GetString(SI_DQT_MOUNT_TRAINING), TIMER_TYPE.MOUNT)
+        TimerQuest:new(GetString(SI_DQT_MOUNT_TRAINING), TIMER_TYPE.MOUNT),
+        TimerQuest:new(GetString(SI_DQT_BEQUEATHER), TIMER_TYPE.BEQUEATHER)
     }
 )
 
