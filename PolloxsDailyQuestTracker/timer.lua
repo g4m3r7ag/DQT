@@ -55,8 +55,47 @@ function Timer.onRidingSkillImprovement(eventCode, ridingSkillType, previous, cu
 	end
 end
 
+--[[
 function Timer:resetBequeatherTimer()
-	self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
+		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+	else
+		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function(selfInteraction, control, data)
+			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
+			if timeRemaining ~= 0 and not data.optionUsable then
+			self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+			end
+		end)
+	end
+end
+
+function Timer:resetBequeatherTimer()
+	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
+		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+	else
+		Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+	end
+end
+--]]
+
+function Timer:resetBequeatherTimer()
+	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
+		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+	elseif GetTimeToShadowyConnectionsResetInSeconds() ~= 0 then
+		self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+	else 
+		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function(selfInteraction, control, data)
+			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
+			local bequeatherdelays = {5, 10, 20}
+			if timeRemaining ~= 0 then
+				self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+			else
+				for _, delay in ipairs(bequeatherdelays) do
+					zo_callLater(function() Timer:resetBequeatherTimer() end, 1000 * delay)
+				end
+			end
+		end)
+	end
 end
 
 --[[
