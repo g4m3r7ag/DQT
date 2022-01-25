@@ -68,7 +68,7 @@ function Timer:resetBequeatherTimer()
 		end)
 	end
 end
-
+--]]
 function Timer:resetBequeatherTimer()
 	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
 		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
@@ -76,8 +76,8 @@ function Timer:resetBequeatherTimer()
 		Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
 	end
 end
---]]
 
+--[[
 function Timer:resetBequeatherTimer()
 	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
 		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
@@ -97,7 +97,7 @@ function Timer:resetBequeatherTimer()
 		end)
 	end
 end
-
+--]]
 --[[
 There seems to be a slight delay between when EVENT_ACTIVITY_FINDER_ACTIVITY_COMPLETE fires,
 and when GetLFGCooldownTimeRemainingSeconds is actually updated. I have not found a reliable

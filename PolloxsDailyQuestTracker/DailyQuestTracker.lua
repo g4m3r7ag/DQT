@@ -473,6 +473,19 @@ function Main.OnAddOnLoaded(event, addonName)
 	-- The event fires each time *any* addon loads - but we only care about when our own addon loads
 	if addonName == Main.name then
 		EVENT_MANAGER:UnregisterForEvent(Main.name, EVENT_ADD_ON_LOADED)
+
+		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsOnTimeComplete", function(self, control, data)
+			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
+			if timeRemaining <= 0 then
+				d("UpdateShadowyConnectionsOnTimeComplete")
+			end
+		end)
+		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function(self, control, data)
+			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
+			if timeRemaining <= 0 then
+				d("UpdateShadowyConnectionsChatterOption")
+			end
+		end)
 		
 		EVENT_MANAGER:RegisterForEvent(Main.name, EVENT_QUEST_ADDED, Main.onQuestAdded)
 		EVENT_MANAGER:RegisterForEvent(Main.name, EVENT_QUEST_COMPLETE, Main.onQuestComplete)
