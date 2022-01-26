@@ -73,7 +73,8 @@ function Timer:resetBequeatherTimer()
 	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
 		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
 	else
-		Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+--		Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+		d("GetTimeToShadowyConnectionsResetInSeconds")
 	end
 end
 

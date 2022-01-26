@@ -474,16 +474,16 @@ function Main.OnAddOnLoaded(event, addonName)
 	if addonName == Main.name then
 		EVENT_MANAGER:UnregisterForEvent(Main.name, EVENT_ADD_ON_LOADED)
 
-		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsOnTimeComplete", function(self, control, data)
+		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsOnTimeComplete", function()
 			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
 			if timeRemaining <= 0 then
-				d("UpdateShadowyConnectionsOnTimeComplete")
+			d("UpdateShadowyConnectionsOnTimeComplete")
 			end
 		end)
-		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function(self, control, data)
+		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function()
 			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
 			if timeRemaining <= 0 then
-				d("UpdateShadowyConnectionsChatterOption")
+			d("UpdateShadowyConnectionsChatterOption")
 			end
 		end)
 		
