@@ -12,6 +12,8 @@ local TIMER_TYPE = {
 
 Timer.TIMER_TYPE = TIMER_TYPE
 
+local DQTName = DQT.Main.name
+
 function Timer:init()
 	self.questTimers = DQT.SV:getForChar(GetCurrentCharacterId()).questTimers
 	
@@ -20,9 +22,10 @@ function Timer:init()
 	self:resetMountTraining()
 	self:resetBequeatherTimer()
 	
-	EVENT_MANAGER:RegisterForEvent(DQT.Main.name, EVENT_ACTIVITY_FINDER_ACTIVITY_COMPLETE, Timer.onActivityFinderActivityComplete)
-	EVENT_MANAGER:RegisterForEvent(DQT.Main.name, EVENT_BATTLEGROUND_STATE_CHANGED, Timer.onBattlegroundStateChanged)
-	EVENT_MANAGER:RegisterForEvent(DQT.Main.name, EVENT_RIDING_SKILL_IMPROVEMENT, Timer.onRidingSkillImprovement)
+	EVENT_MANAGER:RegisterForEvent(DQTName, EVENT_ACTIVITY_FINDER_ACTIVITY_COMPLETE, Timer.onActivityFinderActivityComplete)
+	EVENT_MANAGER:RegisterForEvent(DQTName, EVENT_BATTLEGROUND_STATE_CHANGED, Timer.onBattlegroundStateChanged)
+	EVENT_MANAGER:RegisterForEvent(DQTName, EVENT_RIDING_SKILL_IMPROVEMENT, Timer.onRidingSkillImprovement)
+	EVENT_MANAGER:RegisterForEvent(DQTName, EVENT_PLAYER_ACTIVATED, Timer.playerActivated)
 end
 
 --[[
@@ -55,50 +58,63 @@ function Timer.onRidingSkillImprovement(eventCode, ridingSkillType, previous, cu
 	end
 end
 
---[[
-function Timer:resetBequeatherTimer()
-	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
-		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
-	else
-		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function(selfInteraction, control, data)
-			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
-			if timeRemaining ~= 0 and not data.optionUsable then
-			self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
-			end
-		end)
-	end
-end
---]]
-function Timer:resetBequeatherTimer()
-	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
-		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
-	else
---		Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
-		d("GetTimeToShadowyConnectionsResetInSeconds")
+
+function Timer:resetBequeatherTimer(eventCode)
+	EVENT_MANAGER:UnregisterForEvent(DQTName, EVENT_CHATTER_END)
+--Check if Shadowy Supplier passive is purchased, if not set timer to na, else reset timer.
+	local clientlang = GetCVar("language.2")
+	if clientlang == "ru" then
+		if IsSkillAbilityPurchased(5, 6, 4) ~= true then
+			self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+		else
+			Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+		end
+	elseif clientlang == "en" then
+		if IsSkillAbilityPurchased(5, 1, 4) ~= true then
+			self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+		else
+			Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+		end
+	elseif clientlang == "de" then
+		if IsSkillAbilityPurchased(5, 2, 4) ~= true then
+			self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+		else
+			Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+		end
+	elseif clientlang == "fr" then
+		if IsSkillAbilityPurchased(5, 1, 4) ~= true then
+			self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
+		else
+			Timer:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
+		end
 	end
 end
 
---[[
-function Timer:resetBequeatherTimer()
-	if IsSkillAbilityPurchased(5, 1, 4) ~= true then
-		self.questTimers[TIMER_TYPE.BEQUEATHER] = "na"
-	elseif GetTimeToShadowyConnectionsResetInSeconds() ~= 0 then
-		self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
-	else 
-		SecurePostHook(INTERACTION, "UpdateShadowyConnectionsChatterOption", function(selfInteraction, control, data)
-			local timeRemaining = GetTimeToShadowyConnectionsResetInSeconds()
-			local bequeatherdelays = {5, 10, 20}
-			if timeRemaining ~= 0 then
-				self:resetTimer(TIMER_TYPE.BEQUEATHER, GetTimeToShadowyConnectionsResetInSeconds())
-			else
-				for _, delay in ipairs(bequeatherdelays) do
-					zo_callLater(function() Timer:resetBequeatherTimer() end, 1000 * delay)
-				end
-			end
-		end)
+--[[Use player activated event to determine if in outlaw zone when changing zones for Shadowy Supplier reset
+If in outlaw zone regester EVENT_CHATTER_BEGIN to call next function]]
+function Timer.playerActivated(eventCode, initial)
+	if IsInOutlawZone() then
+		EVENT_MANAGER:RegisterForEvent(DQTName, EVENT_CHATTER_BEGIN, Timer.OnChatterRegister)
+	else
+		EVENT_MANAGER:UnregisterForEvent(DQTName, EVENT_CHATTER_BEGIN)
 	end
 end
---]]
+
+--[[Check if NPC is Remains-Silent on chatter begin
+If so then register EVENT_CHATTER_END to call timer reset when interaction ends]]
+function Timer.OnChatterRegister(eventCode, optionCount)
+	local interactableName = select(2, GetGameCameraInteractableActionInfo())
+	local RemainsSilent={
+		["Schweigt-still"]=true,
+		["Remains-Silent"]=true,
+		["Хранит-Молчание"]=true,
+		["Garde-le-Silence"]=true
+	}
+	if RemainsSilent[interactableName] then
+		EVENT_MANAGER:RegisterForEvent(DQTName, EVENT_CHATTER_END, Timer.resetBequeatherTimer)
+	end
+end
+
 --[[
 There seems to be a slight delay between when EVENT_ACTIVITY_FINDER_ACTIVITY_COMPLETE fires,
 and when GetLFGCooldownTimeRemainingSeconds is actually updated. I have not found a reliable
@@ -132,12 +148,12 @@ function Timer.onBattlegroundStateChanged(eventCode, previousState, currentState
 		Timer:resetBattlegroundsTimer()
 		
 		-- try to reset timer again after they leave the battleground
-		EVENT_MANAGER:RegisterForEvent(DQT.Main.Name, EVENT_PLAYER_ACTIVATED, Timer.onBattlegroundLeft)
+		EVENT_MANAGER:RegisterForEvent(DQTName.."_Battleground_Player_Activated", EVENT_PLAYER_ACTIVATED, Timer.onBattlegroundLeft)
 	end
 end
 
 function Timer.onBattlegroundLeft(eventCode, initial)
-	EVENT_MANAGER:UnregisterForEvent(DQT.Main.Name, EVENT_PLAYER_ACTIVATED)
+	EVENT_MANAGER:UnregisterForEvent(DQTName.."_Battleground_Player_Activated", EVENT_PLAYER_ACTIVATED)
 	Timer:resetBattlegroundsTimer()
 end
 

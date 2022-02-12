@@ -23,6 +23,7 @@ L.SI_DQT_OTHER_TIMERS = "その他の時間"
 L.SI_DQT_RANDOM_DUNGEON = "ランダム ダンジョン"
 L.SI_DQT_RANDOM_BATTLEGROUNDS	= "ランダム バトルグラウンド"
 L.SI_DQT_MOUNT_TRAINING = "マウント トレーニング"
+L.SI_DQT_BEQUEATHER					= "Shadowy Supplier"
 L.SI_DQT_ELSWEYR_PROLOGUE			= "Elsweyr Prologue"
 L.SI_DQT_ELSWEYR					= "Elsweyr"
 L.SI_DQT_DRAGONHOLD					= "Dragonhold" -- Added by DarkPhalanx
