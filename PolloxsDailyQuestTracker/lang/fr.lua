@@ -8,58 +8,62 @@ L.SI_DQT_CHARACTERS_HEADER			= "Personnages à afficher"
 L.SI_DQT_SECTION_HEADER				= "Sections à afficher"
 
 -- Section Names
-L.SI_DQT_CRAFTING					= "Artisanat"
-L.SI_DQT_SUMMERSET					= "Summerset"
-L.SI_DQT_VVARDENFELL				= "Vvardenfell"
-L.SI_DQT_GUILD						= "Guilde"
+L.SI_DQT_CRAFTING					= GetString(SI_QUESTTYPE4)
+L.SI_DQT_UNDAUNTED_PLEDGE			= GetString(SI_QUESTTYPE15)
+L.SI_DQT_SUMMERSET					= GetZoneNameById(1011)
+L.SI_DQT_VVARDENFELL				= GetZoneNameById(849)
+L.SI_DQT_GUILD						= GetString(SI_QUESTTYPE3)
 L.SI_DQT_CYRODILIC_COLLECTIONS		= "Cyrodilic Collections"
-L.SI_DQT_CLOCKWORK_CITY				= "Clockwork City"
-L.SI_DQT_WROTHGAR					= "Wrothgar"
-L.SI_DQT_THIEVES_GUILD				= "Thieves Guild"
-L.SI_DQT_DARK_BROTHERHOOD			= "Dark Brotherhood"
-L.SI_DQT_MURKMIRE					= "Murkmire"
+L.SI_DQT_CLOCKWORK_CITY				= GetZoneNameById(980)
+L.SI_DQT_WROTHGAR					= GetZoneNameById(684)
+L.SI_DQT_THIEVES_GUILD				= GetZoneNameById(816)
+L.SI_DQT_DARK_BROTHERHOOD			= GetZoneNameById(823)
+L.SI_DQT_MURKMIRE					= GetZoneNameById(726)
 L.SI_DQT_OTHER_TIMERS				= "Other Timers"
-L.SI_DQT_RANDOM_DUNGEON				= "Random Dungeon"
-L.SI_DQT_RANDOM_BATTLEGROUNDS		= "Random Battlegrounds"
-L.SI_DQT_MOUNT_TRAINING				= "Mount Training"
-L.SI_DQT_BEQUEATHER					= "Fournisseur des ombres"
+L.SI_DQT_RANDOM_DUNGEON				= GetString(SI_DUNGEON_FINDER_RANDOM_FILTER_TEXT)
+L.SI_DQT_RANDOM_BATTLEGROUNDS		= GetString(SI_BATTLEGROUND_FINDER_RANDOM_FILTER_TEXT)
+L.SI_DQT_MOUNT_TRAINING				= GetString(SI_STAT_GAMEPAD_RIDING_HEADER_TRAINING)
+L.SI_DQT_BEQUEATHER					= select(1, GetSkillAbilityInfo(5,1,4))
 L.SI_DQT_ELSWEYR_PROLOGUE			= "Elsweyr Prologue"
-L.SI_DQT_ELSWEYR					= "Elsweyr"
-L.SI_DQT_DRAGONHOLD					= "Dragonhold" -- Added by DarkPhalanx
-L.SI_DQT_WESTERN_SKYRIM				= "Western Skyrim" -- Added by DarkPhalanx
-L.SI_DQT_IMPERIAL_CITY				= "Imperial City" -- Added by DarkPhalanx
-L.SI_DQT_THE_REACH					= "The Reach" -- Added by DarkPhalanx
+L.SI_DQT_ELSWEYR					= GetZoneNameById(1086)
+L.SI_DQT_DRAGONHOLD					= GetZoneNameById(1133) -- Added by DarkPhalanx
+L.SI_DQT_WESTERN_SKYRIM				= GetZoneNameById(1160) -- Added by DarkPhalanx
+L.SI_DQT_IMPERIAL_CITY				= GetZoneNameById(584) -- Added by DarkPhalanx
+L.SI_DQT_THE_REACH					= GetZoneNameById(1207) -- Added by DarkPhalanx
 L.SI_DQT_LOWER_CRAGLORN				= "Lower Craglorn" -- Added by DarkPhalanx
 L.SI_DQT_UPPER_CRAGLORN				= "Upper Craglorn" -- Added by DarkPhalanx
-L.SI_DQT_BLACKWOOD					= "Blackwood" -- Added by DarkPhalanx
+L.SI_DQT_BLACKWOOD					= GetZoneNameById(1261) -- Added by DarkPhalanx
+L.SI_DQT_DEADLANDS					= GetZoneNameById(1286) -- Added by g4m3r7ag
 
 -- Quest Type Names
-L.SI_DQT_GROUP_BOSS					= "Group Boss"
+L.SI_DQT_GROUP_BOSS					= GetString(SI_ZONECOMPLETIONTYPE9)
+L.SI_DQT_DELVE						= GetString(SI_INSTANCEDISPLAYTYPE7)
 L.SI_DQT_GEYSERS					= "Geysers"
 L.SI_DQT_ASHLANDER_HUNT				= "Ashlander Hunt"
 L.SI_DQT_ASHLANDER_RELIC			= "Ashlander Relic"
-L.SI_DQT_FIGHTERS_GUILD				= "Guilde des guerriers"
-L.SI_DQT_MAGES_GUILD				= "Guilde des mages"
-L.SI_DQT_UNDAUNTED_DELVE			= "Guilde des voleurs"
+L.SI_DQT_FIGHTERS_GUILD				= GetSkillLineName(5,2)
+L.SI_DQT_MAGES_GUILD				= GetSkillLineName(5,3)
+L.SI_DQT_UNDAUNTED_DELVE			= GetString(SI_VISUALARMORTYPE4).." "..GetString(SI_INSTANCEDISPLAYTYPE7)
 L.SI_DQT_TARNISHED					= "Tarnished"
 L.SI_DQT_BLACKFEATHER_COURT			= "Blackfeather Court"
 L.SI_DQT_RYES_REACQUISITIONS		= "Rye's Reacquisitions"
 L.SI_DQT_HEIST						= "Casse"
+L.SI_DQT_GOLD_COAST_BOUNTY			= GetString(SI_STATS_BOUNTY_LABEL)
 L.SI_DQT_SACRAMENT					= "Sacrement"
 L.SI_DQT_ROOT_WHISPER				= "Root-Whisper"
 L.SI_DQT_NEW_MOON					= "New Moon" -- Added by DarkPhalanx
 L.SI_DQT_DRAGONHUNT					= "Dragon Hunts" -- Added by DarkPhalanx
 L.SI_DQT_HARROWSTORM				= "Harrowstorms" -- Added by DarkPhalanx
-L.SI_DQT_PVP						= "PVP" -- Added by DarkPhalanx
+L.SI_DQT_PVP						= GetString(SI_GUILDFOCUSATTRIBUTEVALUE5) -- Added by DarkPhalanx
 L.SI_DQT_RESISTANCE					= "Wayward Guardian" -- Added by DarkPhalanx
 
-L.SI_DQT_CLOTHING					= "Couture"
-L.SI_DQT_BLACKSMITHING				= "Forge"
-L.SI_DQT_WOODWORKING				= "Travail du bois"
-L.SI_DQT_JEWELRY					= "Joaillerie"
-L.SI_DQT_ALCHEMY					= "Alchimie"
-L.SI_DQT_ENCHANTING					= "Enchantement"
-L.SI_DQT_PROVISIONING				= "Cuisine"
+L.SI_DQT_CLOTHING					= GetString(SI_ITEMFILTERTYPE14)
+L.SI_DQT_BLACKSMITHING				= GetString(SI_ITEMFILTERTYPE13)
+L.SI_DQT_WOODWORKING				= GetString(SI_ITEMFILTERTYPE15)
+L.SI_DQT_JEWELRY					= GetString(SI_ITEMFILTERTYPE25)
+L.SI_DQT_ALCHEMY					= GetString(SI_ITEMFILTERTYPE16)
+L.SI_DQT_ENCHANTING					= GetString(SI_ITEMFILTERTYPE17)
+L.SI_DQT_PROVISIONING				= GetString(SI_ITEMFILTERTYPE18)
 
 --[[ Set these to the strings at the start of each quest, including
 the leading space. The code will generate the display name by stripping
@@ -95,38 +99,38 @@ L.SI_DQT_GOLD_COAST_QUESTS_DARK_BROTHERHOOD_SACRAMENTS_PREFIX				= "Sacrement :
 --[[ Alternate display names
 --]]
 -- Summerset Bounty Quests (World Boss)	
-L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_01_DISPLAY = "L'Alchimiste abyssal"
+--[[L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_01_DISPLAY = "L'Alchimiste abyssal"
 L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_02_DISPLAY = "Du même plumage"
 L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_03_DISPLAY = "Inoubliable"
 L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_04_DISPLAY = "Naufragé"
 L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_05_DISPLAY = "La mer maladive"
-L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_06_DISPLAY = "Dompter la nature"
+L.SI_DQT_SUMMERSET_QUESTS_BOUNTY_06_DISPLAY = "Dompter la nature"--]]
 
 -- Vvardenfell Bounty Quests (World Boss)	
-L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_01_DISPLAY = "L'Apprenti anxieux"
+--[[L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_01_DISPLAY = "L'Apprenti anxieux"
 L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_02_DISPLAY = "Une faim dévorante"
 L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_03_DISPLAY = "Réduire le troupeau"
 L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_04_DISPLAY = "Garanti sans bœuf"
 L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_05_DISPLAY = "Malédiction de Salothan"
-L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_06_DISPLAY = "Chant de la sirène"
+L.SI_DQT_VVARDENFELL_QUESTS_BOUNTY_06_DISPLAY = "Chant de la sirène"--]]
 
 -- Wrothgar Group Boss Quests	
-L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_01_DISPLAY = "Hérésie par l'ignorance"
+--[[L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_01_DISPLAY = "Hérésie par l'ignorance"
 L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_02_DISPLAY = "Nourrir les foules"
 L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_03_DISPLAY = "Abondance de la nature"
 L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_04_DISPLAY = "L'odeur du crime"
 L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_05_DISPLAY = "Sauvetage académique"
-L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_06_DISPLAY = "Neige et vapeur"
+L.SI_DQT_WROTHGAR_QUESTS_GROUP_BOSS_DAILIES_06_DISPLAY = "Neige et vapeur"--]]
 
 -- Dark Brotherhood Bounty Quests
-L.SI_DQT_GOLD_COAST_QUESTS_BOUNTIES_01_DISPLAY = "Mal enfoui"
+--[[L.SI_DQT_GOLD_COAST_QUESTS_BOUNTIES_01_DISPLAY = "Mal enfoui"
 L.SI_DQT_GOLD_COAST_QUESTS_BOUNTIES_02_DISPLAY = "Le bien commun"
 L.SI_DQT_GOLD_COAST_QUESTS_BOUNTIES_03_DISPLAY = "Ombres menaçantes"
-L.SI_DQT_GOLD_COAST_QUESTS_BOUNTIES_04_DISPLAY = "Le hurlement des foules"
+L.SI_DQT_GOLD_COAST_QUESTS_BOUNTIES_04_DISPLAY = "Le hurlement des foules"--]]
 
 -- Clockwork City Bounty Quests
-L.SI_DQT_CLOCKWORK_CITY_QUESTS_BOUNTY_01_DISPLAY = "Un si beau plumage"
-L.SI_DQT_CLOCKWORK_CITY_QUESTS_BOUNTY_02_DISPLAY = "Attirer l'Imparfait"
+--[[L.SI_DQT_CLOCKWORK_CITY_QUESTS_BOUNTY_01_DISPLAY = "Un si beau plumage"
+L.SI_DQT_CLOCKWORK_CITY_QUESTS_BOUNTY_02_DISPLAY = "Attirer l'Imparfait"--]]
 
 for stringId, translation in pairs(L) do
 	SafeAddString(_G[stringId], translation, 0)
