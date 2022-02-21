@@ -270,9 +270,6 @@ Info.GuildQuests =
                 newQuest(SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_13),
                 newQuest(SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_14),
                 newQuest(SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_15)
---[[                newQuest(SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_16),
-                newQuest(SI_DQT_GUILD_DAILY_QUESTS_UNDAUNTED_DAILY_QUESTS_17)
-				There's only 15 of these quests and it was adding blank checkboxes -g4m3r7ag --]]
             }
         )
     }
@@ -884,8 +881,11 @@ Info.DeadlandsQuests =
 )
 
 -- create Elsweyr Prologue Quest object from variable like SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_01
-local function epQuestType(questLangVar, displayLangVar)
+--[[local function epQuestType(questLangVar, displayLangVar)
     return QuestType:new(GetString(displayLangVar), QUEST_TYPE_ENUM.MISC, {Quest:new(GetString(questLangVar))})
+end--]]
+local function epQuestType(questLangVar)
+    return QuestType:new(GetString(questLangVar), QUEST_TYPE_ENUM.MISC, {Quest:new(GetString(questLangVar))})
 end
 
 Info.ElsweyrPrologueQuests =

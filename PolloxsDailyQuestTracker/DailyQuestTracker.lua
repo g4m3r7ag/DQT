@@ -23,7 +23,7 @@ Main.TIMER_INDENT = 26
 Main.COLUMN_WIDTH = 100
 
 -- how far indented from left side is first column of character name
-Main.COLUMN_INDENT = 240
+Main.COLUMN_INDENT = 430
 
 --[[
 	Get the quest sections to show
