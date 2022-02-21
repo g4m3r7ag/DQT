@@ -17,7 +17,7 @@
 			<Dimensions y="24" />
 			<Controls>
 				<Label name="$(parent)Name" font="ZoFontGame">
-					<Dimensions x="210" />
+					<Dimensions x="420" />
 					<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" />
 				</Label>
 				
@@ -48,16 +48,16 @@
 			<Controls>
 				<Label name="$(parent)Name" font="ZoFontHeader2">
 					<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="LEFT" />
-					<Dimensions x="200"/>
+					<Dimensions x="390"/>
 				</Label>
 			</Controls>
 		</Control>
 		
 		<Control name="DQTQuest" inherits="ZO_TreeEntry" virtual="true">
-			<Dimensions y="24" />
+			<Dimensions y="26" />
 			<Controls>
 				<Label name="$(parent)Name" font="QuestFont">
-					<Dimensions x="230" />
+					<Dimensions x="420" />
 					<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" />
 				</Label>
 				
@@ -85,7 +85,7 @@
 		
 		<Control name="DQTQuestType" inherits="ZO_TreeHeader" virtual="true">
 			<!-- set y a little larger than DQTStatus y dimension so that there is a little vertical space between rows -->
-			<Dimensions y="26" />
+			<Dimensions y="30" />
 			<Controls>
 				<Button name="$(parent)Toggle">
 					<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" />
@@ -102,7 +102,7 @@
 				<Label name="$(parent)Name" font="ZoFontGame">
 					<Anchor point="TOPLEFT" relativeTo="$(parent)Toggle" relativePoint="TOPRIGHT" />
 					<!-- make x dimension smaller by the size of Toggle -->
-					<Dimensions x="206" />
+					<Dimensions x="396" />
 				</Label>
 				
 				<!-- HACK: Couldn't figure out how to dynamically add columns to a tree node, nor how to add them to the template, so hardcoding here -->
@@ -132,7 +132,7 @@
 			<Controls>
 				<Label name="$(parent)Name" font="ZoFontHeader2">
 					<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="LEFT" />
-					<Dimensions x="200"/>
+					<Dimensions x="420"/>
 				</Label>
 			</Controls>
 		</Control>
