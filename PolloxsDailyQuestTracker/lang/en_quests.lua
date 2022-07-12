@@ -751,6 +751,29 @@ L.SI_DQT_DEADLANDS_QUESTS_DELVE_04 = GetQuestName(6710) -- "Propaganda Suppresse
 L.SI_DQT_DEADLANDS_QUESTS_DELVE_05 = GetQuestName(6713) -- "Flowers in the Folly"
 L.SI_DQT_DEADLANDS_QUESTS_DELVE_06 = GetQuestName(6711) -- "Brandfire Reformatory Relics"
 
+-- High Isle World Boss Quests -- Added by g4m3r7ag
+L.SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_01 = GetQuestName(6821) -- "Ascendant Shadows"
+L.SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_02 = GetQuestName(6803) -- "Avarice of the Eldertide"
+L.SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_03 = GetQuestName(6807) -- "The Sable Knight"
+L.SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_04 = GetQuestName(6816) -- "The Serpent Caller"
+L.SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_05 = GetQuestName(6822) -- "A Special Reagent"
+L.SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_06 = GetQuestName(6808) -- "Wildhorn's Wrath"
+
+-- High Isle Delve Quests -- Added by g4m3r7ag
+L.SI_DQT_HIGH_ISLE_QUESTS_DELVE_01 = GetQuestName(6809) -- "Arcane Research"
+L.SI_DQT_HIGH_ISLE_QUESTS_DELVE_02 = GetQuestName(6826) -- "Druidic Research"
+L.SI_DQT_HIGH_ISLE_QUESTS_DELVE_03 = GetQuestName(6805) -- "A Final Peace"
+L.SI_DQT_HIGH_ISLE_QUESTS_DELVE_04 = GetQuestName(6825) -- "Pirate Problems"
+L.SI_DQT_HIGH_ISLE_QUESTS_DELVE_05 = GetQuestName(6818) -- "Prison Problems"
+L.SI_DQT_HIGH_ISLE_QUESTS_DELVE_06 = GetQuestName(6815) -- "Seek and Destroy"
+
+-- High Isle Volcanic Vents Quests -- Added by g4m3r7ag
+L.SI_DQT_HIGH_ISLE_QUESTS_VOLCANIC_VENTS_01 = GetQuestName(6812) -- "Venting the Threat"
+
+-- High Isle Tales of Tribute Quests -- Added by g4m3r7ag
+L.SI_DQT_TALES_OF_TRIBUTE_QUESTS_01 = GetQuestName(6831) -- "Cards Across the Continent"
+L.SI_DQT_TALES_OF_TRIBUTE_QUESTS_02 = GetQuestName(6832) -- "Dueling Tributes" 
+
 for stringId, translation in pairs(L) do
     ZO_CreateStringId(stringId, translation)
 end

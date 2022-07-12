@@ -85,7 +85,7 @@
 		
 		<Control name="DQTQuestType" inherits="ZO_TreeHeader" virtual="true">
 			<!-- set y a little larger than DQTStatus y dimension so that there is a little vertical space between rows -->
-			<Dimensions y="44" />			
+			<Dimensions y="28" />			
 			<Controls>
 				<Button name="$(parent)Toggle">
 					<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" />

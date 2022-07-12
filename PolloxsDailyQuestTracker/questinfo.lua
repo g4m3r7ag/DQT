@@ -276,7 +276,7 @@ Info.GuildQuests =
 )
 
 -- create Cyrodilic Collections Quest object from variable like SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_01
-local function ccQuestType(questLangVar)
+--[[local function ccQuestType(questLangVar)
     return QuestType:new(GetString(questLangVar), QUEST_TYPE_ENUM.MISC, {Quest:new(GetString(questLangVar))})
 end
 
@@ -291,9 +291,9 @@ Info.CyrodilicCollectionsQuests =
         ccQuestType(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_05),
         ccQuestType(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_06)
     }
-)
+)]]
 
-Info.LowerCraglorn =
+--[[Info.LowerCraglorn =
     QuestSection:new(
     GetString(SI_DQT_LOWER_CRAGLORN),
     {
@@ -405,7 +405,34 @@ Info.UpperCraglorn =
             }
         )
     }
-)
+)]]
+
+Info.Craglorn =
+    QuestSection:new(
+    GetString(SI_DQT_CRAGLORN),
+    {
+        QuestType:new(
+            GetString(SI_DQT_GROUP_PVE),
+            QUEST_TYPE_ENUM.MISC,
+            {
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_01),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_02),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_03),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_04),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_05),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_06),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_LOWER_CRAGLORN_07),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_01),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_02),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_03),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_04),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_05),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_06),
+                newQuest(SI_DQT_CRAGLORN_QUESTS_UPPER_CRAGLORN_07) 
+            }
+        )
+    }
+    )
 
 Info.ClockworkCityQuests =
     QuestSection:new(
@@ -628,6 +655,18 @@ Info.MurkmireQuests =
                 newQuest(SI_DQT_MURKMIRE_QUESTS_ROOT_WHISPER_04),
                 newQuest(SI_DQT_MURKMIRE_QUESTS_ROOT_WHISPER_05)
             }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_PROLOGUE),
+            QUEST_TYPE_ENUM.MISC,
+            {
+                newQuest(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_01),
+                newQuest(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_02),
+                newQuest(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_03),
+                newQuest(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_04),
+                newQuest(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_05),
+                newQuest(SI_DQT_BLACK_MARSH_CYRODILIC_COLLECTIONS_06)
+            }
         )
     }
 )
@@ -657,6 +696,21 @@ Info.ElsweyrQuests =
                 newQuest(SI_DQT_ELSWEYR_QUESTS_EXPLORATORY_04),
                 newQuest(SI_DQT_ELSWEYR_QUESTS_EXPLORATORY_05),
                 newQuest(SI_DQT_ELSWEYR_QUESTS_EXPLORATORY_06)
+            }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_PROLOGUE),
+            QUEST_TYPE_ENUM.MISC,
+            {
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_01),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_02),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_03),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_04),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_05),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_06),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_07),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_08),
+                newQuest(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_09)
             }
         )
     }
@@ -880,11 +934,58 @@ Info.DeadlandsQuests =
     }
 )
 
+Info.HighIsle = 
+    QuestSection:new(
+    GetString(SI_DQT_HIGH_ISLE),
+    {
+        QuestType:new(
+            GetString(SI_DQT_GROUP_BOSS),
+            QUEST_TYPE_ENUM.GROUP_BOSS,
+            {
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_01),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_02),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_03),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_04),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_05),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_WORLDBOSS_06)
+            }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_DELVE),
+            QUEST_TYPE_ENUM.DELVE,
+            {
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_DELVE_01),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_DELVE_02),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_DELVE_03),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_DELVE_04),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_DELVE_05),
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_DELVE_06)
+            }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_VOLCANIC_VENTS),
+            QUEST_TYPE_ENUM.DOLMEN,
+            {
+                newQuest(SI_DQT_HIGH_ISLE_QUESTS_VOLCANIC_VENTS_01)
+            }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_TALES_OF_TRIBUTE),
+            QUEST_TYPE_ENUM.MISC,
+            {
+                newQuest(SI_DQT_TALES_OF_TRIBUTE_QUESTS_01),
+                newQuest(SI_DQT_TALES_OF_TRIBUTE_QUESTS_02)
+            }
+        )
+    }
+    )
+    
+
 -- create Elsweyr Prologue Quest object from variable like SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_01
 --[[local function epQuestType(questLangVar, displayLangVar)
     return QuestType:new(GetString(displayLangVar), QUEST_TYPE_ENUM.MISC, {Quest:new(GetString(questLangVar))})
 end--]]
-local function epQuestType(questLangVar)
+--[[local function epQuestType(questLangVar)
     return QuestType:new(GetString(questLangVar), QUEST_TYPE_ENUM.MISC, {Quest:new(GetString(questLangVar))})
 end
 
@@ -902,7 +1003,7 @@ Info.ElsweyrPrologueQuests =
         epQuestType(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_08, SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_08_DISPLAY),
         epQuestType(SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_09, SI_DQT_NORTHERN_ELSWEYR_DEFENSE_FORCE_09_DISPLAY)
     }
-)
+)]]
 
 Info.OtherTimerQuests =
     TimerSection:new(
@@ -921,23 +1022,25 @@ Info.QuestSections = {
     Info.OtherTimerQuests,
     Info.CraftingQuests,
     Info.Pledges,
-    Info.SummersetQuests,
-    Info.VvardenfellQuests,
-    Info.LowerCraglorn,
-    Info.UpperCraglorn,
-    Info.CyrodilicCollectionsQuests,
     Info.GuildQuests,
-    Info.ClockworkCityQuests, -- Added by DarkPhalanx
+    Info.Craglorn,
     Info.ImperialCityQuests,
     Info.WrothgarQuests,
     Info.ThievesGuildQuests,
     Info.DarkBrotherhoodQuests,
+    Info.VvardenfellQuests,
+    Info.ClockworkCityQuests, -- Added by DarkPhalanx
+    Info.SummersetQuests,
     Info.MurkmireQuests,
-    Info.ElsweyrPrologueQuests,
+--    Info.LowerCraglorn,
+--    Info.UpperCraglorn,
+--    Info.CyrodilicCollectionsQuests,
+--    Info.ElsweyrPrologueQuests,
     Info.ElsweyrQuests,
     Info.DragonHoldQuests, -- Added by DarkPhalanx
     Info.WesternSkyrimQuests, -- Added by DarkPhalanx
     Info.ReachQuests, -- Added by DarkPhalanx
 	Info.BlackwoodQuests, -- Added by DarkPhalanx
-	Info.DeadlandsQuests -- Added by g4m3r7ag
+	Info.DeadlandsQuests, -- Added by g4m3r7ag
+    Info.HighIsle -- Added by g4m3r7ag
 }
