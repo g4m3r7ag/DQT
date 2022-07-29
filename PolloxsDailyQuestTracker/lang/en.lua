@@ -36,6 +36,8 @@ L.SI_DQT_CRAGLORN					= GetZoneNameById(888) -- Added by g4m3r7ag
 L.SI_DQT_BLACKWOOD					= GetZoneNameById(1261) -- Added by DarkPhalanx
 L.SI_DQT_DEADLANDS					= GetZoneNameById(1286) -- Added by g4m3r7ag
 L.SI_DQT_HIGH_ISLE					= GetZoneNameById(1318) -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_PVE 				= GetString(SI_CAMPAIGNRULESETTYPE1).." Settlements" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_PVP				= GetString(SI_CAMPAIGNRULESETTYPE1).." "..GetString(SI_GUILDFOCUSATTRIBUTEVALUE5) -- Added by g4m3r7ag
 
 -- Quest Type Names
 L.SI_DQT_GROUP_BOSS					= GetString(SI_ZONECOMPLETIONTYPE9)
@@ -62,6 +64,19 @@ L.SI_DQT_PROLOGUE					= GetString(SI_QUESTTYPE14) --Added by g4m3r7ag
 L.SI_DQT_GROUP_PVE					= GetString(SI_GUILDFOCUSATTRIBUTEVALUE2) --Added by g4m3r7ag
 L.SI_DQT_VOLCANIC_VENTS				= "Volcanic Vents" -- Added by g4m3r7ag
 L.SI_DQT_TALES_OF_TRIBUTE			= GetString(SI_ACTIVITY_FINDER_CATEGORY_TRIBUTE) -- Added by g4m3r7ag
+L.SI_DQT_BRUMA						= "Bruma" -- Added by g4m3r7ag
+L.SI_DQT_CHEYDINHAL 				= "Cheydinhal" -- Added by g4m3r7ag
+L.SI_DQT_CHORROL					= "Chorrol and Weynon Priory" -- Added by g4m3r7ag
+L.SI_DQT_CROPSFORD 					= "Cropsford" -- Added by g4m3r7ag
+L.SI_DQT_VLASTARUS 					= "Vlastarus" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_FIGHTERS_GUILD 	= GetSkillLineName(5,2).." "..GetString(SI_STATS_BOUNTY_LABEL) -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_BATTLE_MISSIONS 	= "Battle Missions" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_BOUNTY_MISSIONS 	= GetString(SI_STATS_BOUNTY_LABEL).." ".."Missions" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_SCOUTING_MISSIONS = "Scouting Missions" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_WARFRONT_MISSION 	= "Warfront Missions" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_ELDER_SCROLL		= "Elder Scrolls Missions" -- Added by g4m3r7ag
+L.SI_DQT_CYRODIIL_CONQUEST_MISSION  = "Conquest Missions" -- Added by g4m3r7ag
+
 
 L.SI_DQT_CLOTHING					= GetString(SI_ITEMFILTERTYPE14)
 L.SI_DQT_BLACKSMITHING				= GetString(SI_ITEMFILTERTYPE13)

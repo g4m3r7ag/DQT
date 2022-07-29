@@ -479,6 +479,12 @@ L.SI_DQT_CYRODIIL_PVP_QUESTS_BOUNTY_MISSIONS_04 = GetQuestName(5234) -- "Tötet 
 L.SI_DQT_CYRODIIL_PVP_QUESTS_BOUNTY_MISSIONS_05 = GetQuestName(5222) -- "Tötet feindliche Templer"
 L.SI_DQT_CYRODIIL_PVP_QUESTS_BOUNTY_MISSIONS_06 = GetQuestName(6012) -- "Tötet feindliche Hüter"
 
+-- Cyrodiil. PvP Quests. Conquest Missions
+L.SI_DQT_CYRODIIL_PVP_QUESTS_CONQUEST_MISSIONS_01 = GetQuestName(6207) -- "Capture All 3 Towns"
+L.SI_DQT_CYRODIIL_PVP_QUESTS_CONQUEST_MISSIONS_02 = GetQuestName(6208) -- "Capture Any Nine Resources"
+L.SI_DQT_CYRODIIL_PVP_QUESTS_CONQUEST_MISSIONS_03 = GetQuestName(6210) -- "Capture All Three Keeps"
+L.SI_DQT_CYRODIIL_PVP_QUESTS_CONQUEST_MISSIONS_04 = GetQuestName(6209) -- "Kill 40 Enemy Players"
+
 -- Cyrodiil. PvP Quests. Scouting Missions
 L.SI_DQT_CYRODIIL_PVP_QUESTS_SCOUTING_MISSIONS_01 = GetQuestName(2816) -- "Erkundet den Alessia-Bauernhof"
 L.SI_DQT_CYRODIIL_PVP_QUESTS_SCOUTING_MISSIONS_02 = GetQuestName(2893) -- "Erkundet das Alessia-Holzfällerlager"
@@ -575,7 +581,7 @@ L.SI_DQT_CYRODIIL_PVP_QUESTS_WARFRONT_MISSIONS_18 = GetQuestName(2923) -- "Erobe
 
 -- Cyrodiil. PvP Quests. Elder Scrolls Missions
 L.SI_DQT_CYRODIIL_PVP_QUESTS_ELDER_SCROLLS_MISSIONS_01 = GetQuestName(2661) -- "Die Alma Ruma-Schriftrolle der Alten"
-L.SI_DQT_CYRODIIL_PVP_QUESTS_ELDER_SCROLLS_MISSIONS_02 = GetQuestName(2665) -- "Die Altadoon-Schriftrolle der Alten"
+L.SI_DQT_CYRODIIL_PVP_QUESTS_ELDER_SCROLLS_MISSIONS_02 = GetQuestName(2610) -- "Die Altadoon-Schriftrolle der Alten"
 L.SI_DQT_CYRODIIL_PVP_QUESTS_ELDER_SCROLLS_MISSIONS_03 = GetQuestName(2640) -- "Die Chim-Schriftrolle der Alten"
 L.SI_DQT_CYRODIIL_PVP_QUESTS_ELDER_SCROLLS_MISSIONS_04 = GetQuestName(2658) -- "Die Ghartok-Schriftrolle der Alten"
 L.SI_DQT_CYRODIIL_PVP_QUESTS_ELDER_SCROLLS_MISSIONS_05 = GetQuestName(2656) -- "Die Mnem-Schriftrolle der Alten"
