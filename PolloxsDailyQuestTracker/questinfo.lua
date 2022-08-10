@@ -1314,12 +1314,12 @@ Info.QuestSections = {
     Info.OtherTimerQuests,
     Info.CraftingQuests,
     Info.Pledges,
-    Info.CyrodiilSettlements,
-    Info.ImperialCityQuests,
-    Info.CyrodiilPVP,
+--    Info.CyrodiilSettlements,
+--    Info.ImperialCityQuests,
+--    Info.CyrodiilPVP,
     Info.GuildQuests,
     Info.Craglorn,
---    Info.ImperialCityQuests,
+    Info.ImperialCityQuests,
     Info.WrothgarQuests,
     Info.ThievesGuildQuests,
     Info.DarkBrotherhoodQuests,
@@ -1327,15 +1327,14 @@ Info.QuestSections = {
     Info.ClockworkCityQuests, -- Added by DarkPhalanx
     Info.SummersetQuests,
     Info.MurkmireQuests,
---    Info.LowerCraglorn,
---    Info.UpperCraglorn,
---    Info.CyrodilicCollectionsQuests,
---    Info.ElsweyrPrologueQuests,
     Info.ElsweyrQuests,
     Info.DragonHoldQuests, -- Added by DarkPhalanx
     Info.WesternSkyrimQuests, -- Added by DarkPhalanx
     Info.ReachQuests, -- Added by DarkPhalanx
 	Info.BlackwoodQuests, -- Added by DarkPhalanx
 	Info.DeadlandsQuests, -- Added by g4m3r7ag
-    Info.HighIsle -- Added by g4m3r7ag
+    Info.HighIsle, -- Added by g4m3r7ag
+    Info.CyrodiilSettlements, -- Added by g4m3r7ag
+    Info.CyrodiilPVP -- Added by g4m3r7ag
+
 }
