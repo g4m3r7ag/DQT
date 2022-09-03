@@ -699,6 +699,13 @@ Info.ElsweyrQuests =
             }
         ),
         QuestType:new(
+            GetString(SI_DQT_DRAGONHUNT),
+            QUEST_TYPE_ENUM.DOLMEN,
+            {
+                newQuest(SI_DQT_ELSWEYR_QUESTS_DRAGONHUNT_01)
+            }
+        ),
+        QuestType:new(
             GetString(SI_DQT_PROLOGUE),
             QUEST_TYPE_ENUM.MISC,
             {
@@ -768,7 +775,6 @@ Info.DragonHoldQuests =
             GetString(SI_DQT_DRAGONHUNT),
             QUEST_TYPE_ENUM.DOLMEN,
             {
-                newQuest(SI_DQT_SOUTHERN_ELSWEYR_QUESTS_DRAGONHUNT_01),
                 newQuest(SI_DQT_SOUTHERN_ELSWEYR_QUESTS_DRAGONHUNT_02)
             }
         ),
