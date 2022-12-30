@@ -984,7 +984,45 @@ Info.HighIsle =
             }
         )
     }
-    )
+)
+
+Info.Galen = 
+    QuestSection:new(
+    GetString(SI_DQT_GALEN),
+    {
+        QuestType:new(
+            GetString(SI_DQT_GROUP_BOSS),
+            QUEST_TYPE_ENUM.GROUP_BOSS,
+            {
+                newQuest(SI_DQT_GALEN_QUESTS_WORLDBOSS_01),
+                newQuest(SI_DQT_GALEN_QUESTS_WORLDBOSS_02),
+                newQuest(SI_DQT_GALEN_QUESTS_WORLDBOSS_03),
+                newQuest(SI_DQT_GALEN_QUESTS_WORLDBOSS_04),
+                newQuest(SI_DQT_GALEN_QUESTS_WORLDBOSS_05),
+                newQuest(SI_DQT_GALEN_QUESTS_WORLDBOSS_06)
+            }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_DELVE),
+            QUEST_TYPE_ENUM.DELVE,
+            {
+                newQuest(SI_DQT_GALEN_QUESTS_DELVE_01),
+                newQuest(SI_DQT_GALEN_QUESTS_DELVE_02),
+                newQuest(SI_DQT_GALEN_QUESTS_DELVE_03),
+                newQuest(SI_DQT_GALEN_QUESTS_DELVE_04),
+                newQuest(SI_DQT_GALEN_QUESTS_DELVE_05),
+                newQuest(SI_DQT_GALEN_QUESTS_DELVE_06)
+            }
+        ),
+        QuestType:new(
+            GetString(SI_DQT_VOLCANIC_VENTS),
+            QUEST_TYPE_ENUM.DOLMEN,
+            {
+                newQuest(SI_DQT_GALEN_QUESTS_VOLCANIC_VENTS_01)
+            }
+        )
+    }
+)
 
 Info.CyrodiilSettlements =
     QuestSection:new(
@@ -1340,6 +1378,7 @@ Info.QuestSections = {
 	Info.BlackwoodQuests, -- Added by DarkPhalanx
 	Info.DeadlandsQuests, -- Added by g4m3r7ag
     Info.HighIsle, -- Added by g4m3r7ag
+    Info.Galen, -- Added by g4m3r7ag
     Info.CyrodiilSettlements, -- Added by g4m3r7ag
     Info.CyrodiilPVP -- Added by g4m3r7ag
 

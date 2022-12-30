@@ -36,6 +36,7 @@ L.SI_DQT_CRAGLORN					= GetZoneNameById(888) -- Added by g4m3r7ag
 L.SI_DQT_BLACKWOOD					= GetZoneNameById(1261) -- Added by DarkPhalanx
 L.SI_DQT_DEADLANDS					= GetZoneNameById(1286) -- Added by g4m3r7ag
 L.SI_DQT_HIGH_ISLE					= GetZoneNameById(1318) -- Added by g4m3r7ag
+L.SI_DQT_GALEN						= GetZoneNameById(1383) -- Added by g4m3r7ag
 L.SI_DQT_CYRODIIL_PVE 				= GetString(SI_CAMPAIGNRULESETTYPE1).." Settlements" -- Added by g4m3r7ag
 L.SI_DQT_CYRODIIL_PVP				= GetString(SI_CAMPAIGNRULESETTYPE1).." "..GetString(SI_GUILDFOCUSATTRIBUTEVALUE5) -- Added by g4m3r7ag
 

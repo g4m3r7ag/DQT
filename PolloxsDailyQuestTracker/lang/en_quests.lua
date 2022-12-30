@@ -782,6 +782,25 @@ L.SI_DQT_HIGH_ISLE_QUESTS_VOLCANIC_VENTS_01 = GetQuestName(6812) -- "Venting the
 L.SI_DQT_TALES_OF_TRIBUTE_QUESTS_01 = GetQuestName(6831) -- "Cards Across the Continent"
 L.SI_DQT_TALES_OF_TRIBUTE_QUESTS_02 = GetQuestName(6832) -- "Dueling Tributes" 
 
+-- Galen World Boss Quests -- Added by g4m3r7ag
+L.SI_DQT_GALEN_QUESTS_WORLDBOSS_01 = GetQuestName(6886) -- "Flower Fancier"
+L.SI_DQT_GALEN_QUESTS_WORLDBOSS_02 = GetQuestName(6887) -- "Helpful Handbills"
+L.SI_DQT_GALEN_QUESTS_WORLDBOSS_03 = GetQuestName(6884) -- "Volcanic Virtuoso"
+L.SI_DQT_GALEN_QUESTS_WORLDBOSS_04 = GetQuestName(6883) -- "Radiant Souvenirs"
+L.SI_DQT_GALEN_QUESTS_WORLDBOSS_05 = GetQuestName(6888) -- "Marking the Path"
+L.SI_DQT_GALEN_QUESTS_WORLDBOSS_06 = GetQuestName(6885) -- "Critter Capture"
+
+-- Galen Delve Quests -- Added by g4m3r7ag
+L.SI_DQT_GALEN_QUESTS_DELVE_01 = GetQuestName(6878) -- "Sunflower Stamina"
+L.SI_DQT_GALEN_QUESTS_DELVE_02 = GetQuestName(6891) -- "Three-Pronged Approach"
+L.SI_DQT_GALEN_QUESTS_DELVE_03 = GetQuestName(6881) -- "A Wailing Wood"
+L.SI_DQT_GALEN_QUESTS_DELVE_04 = GetQuestName(6890) -- "Recovered Relics"
+L.SI_DQT_GALEN_QUESTS_DELVE_05 = GetQuestName(6889) -- "The Moth Study"
+L.SI_DQT_GALEN_QUESTS_DELVE_06 = GetQuestName(6892) -- "Shrines on Shaky Ground"
+
+-- Galen Volcanic Vents Quests -- Added by g4m3r7ag
+L.SI_DQT_GALEN_QUESTS_VOLCANIC_VENTS_01 = GetQuestName(6901) -- "Imminent Hazard"
+
 for stringId, translation in pairs(L) do
     ZO_CreateStringId(stringId, translation)
 end

@@ -467,6 +467,7 @@ function Main:initialize()
 	
 	-- register a slash command for showing the window by typing in the chat window
 	SLASH_COMMANDS["/dqt"] = Main.toggleDisplay
+	SLASH_COMMANDS["/dailyquest"] = Main.toggleDisplay
 end
 
 function Main.OnAddOnLoaded(event, addonName)
